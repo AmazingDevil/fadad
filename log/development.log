@@ -2087,3 +2087,377 @@ Bunny::TCPConnectionFailed - Could not establish TCP connection to 127.0.0.1:567
   /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
   /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
+
+
+Started GET "/funds" for 127.0.0.1 at 2018-07-19 10:32:51 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (10.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Private::FundsController#index as HTML
+  [1m[35mMember Load (5.3ms)[0m  SELECT `members`.* FROM `members` WHERE `members`.`disabled` = 0 AND `members`.`id` = 1 ORDER BY `members`.`id` ASC LIMIT 1
+  [1m[36m (8.0ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 3 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 4 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.8ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 5 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 6 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 7 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 8 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 9 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 10 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 11 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 12 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 13 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 14 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.7ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 15 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 16 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 17 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 18 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 19 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 20 AND (created_at > '2018-07-18 10:32:52')
+  [1m[36m (0.7ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 21 AND (created_at > '2018-07-18 10:32:52')[0m
+  [1m[35mAccount Load (8.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`member_id` = 1
+  [1m[36mIdDocument Load (18.3ms)[0m  [1mSELECT `id_documents`.* FROM `id_documents` WHERE `id_documents`.`member_id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`activated` = 1
+  [1m[36mTwoFactor Load (1.1ms)[0m  [1mSELECT `two_factors`.* FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`type` = 'TwoFactor::App' LIMIT 1[0m
+  [1m[35mTwoFactor Load (0.4ms)[0m  SELECT `two_factors`.* FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`type` = 'TwoFactor::Sms' LIMIT 1
+  [1m[36mDeposit Load (1.0ms)[0m  [1mSELECT `deposits`.* FROM `deposits` WHERE `deposits`.`member_id` = 1[0m
+  [1m[35mAccount Load (0.6ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`member_id` = 1 AND (currency in (1,2,3,4,5,6,7,8,9))
+  [1m[36mPaymentAddress Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 1 LIMIT 1[0m
+  [1m[35mFundSource Load (0.4ms)[0m  SELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 1 LIMIT 1
+  [1m[36mPaymentAddress Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 2 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.4ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 2 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mFundSource Load (0.4ms)[0m  [1mSELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 4 LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.5ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 3 LIMIT 1
+  [1m[36mPaymentAddress Load (0.8ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 3 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 10 LIMIT 1
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 10 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mFundSource Load (0.4ms)[0m  SELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 2 LIMIT 1
+  [1m[36mPaymentAddress Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 15 LIMIT 1[0m
+  [1m[35mFundSource Load (0.4ms)[0m  SELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 3 LIMIT 1
+  [1m[36mPaymentAddress Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 16 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 16 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mPaymentAddress Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 19 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 19 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mPaymentAddress Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 20 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 20 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mPaymentAddress Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 21 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.8ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 21 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mWithdraw Load (93.1ms)[0m  [1mSELECT `withdraws`.* FROM `withdraws` WHERE `withdraws`.`member_id` = 1[0m
+  [1m[35mFundSource Load (0.6ms)[0m  SELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`member_id` = 1
+  Rendered private/funds/index.html.erb within layouts/funds (3.5ms)
+  Rendered shared/_html5.html.slim (74.3ms)
+  Rendered shared/_meta.html.slim (4.7ms)
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`author_id` = 1 AND `tickets`.`aasm_state` = 'open'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `tickets`.* FROM `tickets` WHERE `tickets`.`author_id` = 1 AND `tickets`.`aasm_state` = 'open'  [["author_id", 1]]
+  Rendered shared/_header_profile_setting.html.slim (43.7ms)
+  Rendered shared/_header_lang_sel.html.slim (5.3ms)
+  Rendered shared/_header.html.slim (61.2ms)
+  Rendered shared/_footer.html.slim (7.1ms)
+Completed 200 OK in 2322ms (Views: 1504.8ms | ActiveRecord: 188.6ms)
+
+
+Started POST "/funds/gen_address" for 127.0.0.1 at 2018-07-19 10:32:56 -0700
+Processing by Private::FundsController#gen_address as */*
+  [1m[36mMember Load (0.7ms)[0m  [1mSELECT `members`.* FROM `members` WHERE `members`.`disabled` = 0 AND `members`.`id` = 1 ORDER BY `members`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 3 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 4 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 5 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 6 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 7 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.7ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 8 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 9 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 10 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 11 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 12 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 13 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 14 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 15 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 16 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 17 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 18 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 19 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36m (0.7ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 20 AND (created_at > '2018-07-18 10:32:57')[0m
+  [1m[35m (0.7ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 21 AND (created_at > '2018-07-18 10:32:57')
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`member_id` = 1[0m
+  [1m[35mIdDocument Load (0.4ms)[0m  SELECT `id_documents`.* FROM `id_documents` WHERE `id_documents`.`member_id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`activated` = 1[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 2
+  [1m[36mPaymentAddress Load (0.2ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 3[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 16
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 19[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 19 LIMIT 1
+Completed 500 Internal Server Error in 174ms
+
+Bunny::TCPConnectionFailed - Could not establish TCP connection to 127.0.0.1:5672: :
+  bunny (1.2.1) lib/bunny/transport.rb:247:in `rescue in initialize_socket'
+  bunny (1.2.1) lib/bunny/transport.rb:241:in `initialize_socket'
+  bunny (1.2.1) lib/bunny/transport.rb:254:in `maybe_initialize_socket'
+  bunny (1.2.1) lib/bunny/session.rb:245:in `start'
+  app/models/amqp_queue.rb:6:in `block in connection'
+  app/models/amqp_queue.rb:5:in `connection'
+  app/models/amqp_queue.rb:11:in `channel'
+  app/models/amqp_queue.rb:15:in `exchanges'
+  app/models/amqp_queue.rb:19:in `exchange'
+  app/models/amqp_queue.rb:24:in `publish'
+  app/models/amqp_queue.rb:32:in `enqueue'
+  app/models/payment_address.rb:16:in `gen_address'
+  app/controllers/private/funds_controller.rb:31:in `block in gen_address'
+  activerecord (4.0.12) lib/active_record/relation/delegation.rb:13:in `each'
+  app/controllers/private/funds_controller.rb:23:in `gen_address'
+  actionpack (4.0.12) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.12) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.12) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:503:in `_run__1064741596485796306__process_action__callbacks'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.12) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.12) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.12) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.12) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.12) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.12) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.12) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.12) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.12) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.12) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.12) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.0.12) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.0.12) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.12) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.12) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth-identity (1.1.1) lib/omniauth/strategies/identity.rb:43:in `other_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:185:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  http_accept_language (2.0.1) lib/http_accept_language/middleware.rb:13:in `call'
+  simple_captcha2 (0.2.2) lib/simple_captcha/middleware.rb:20:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.12) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.12) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:373:in `_run__2369644969066686114__call__callbacks'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.12) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.12) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.12) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.12) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.12) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.12) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  request_store (1.1.0) lib/request_store/middleware.rb:8:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  lib/middleware/security.rb:11:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/static.rb:84:in `call'
+  lib/middleware/i18n_js.rb:9:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.12) lib/rails/engine.rb:511:in `call'
+  railties (4.0.12) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started GET "/funds" for 127.0.0.1 at 2018-07-19 10:33:08 -0700
+Processing by Private::FundsController#index as HTML
+  [1m[36mMember Load (0.4ms)[0m  [1mSELECT `members`.* FROM `members` WHERE `members`.`disabled` = 0 AND `members`.`id` = 1 ORDER BY `members`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 3 AND (created_at > '2018-07-18 10:33:08')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 4 AND (created_at > '2018-07-18 10:33:08')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 5 AND (created_at > '2018-07-18 10:33:08')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 6 AND (created_at > '2018-07-18 10:33:08')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 7 AND (created_at > '2018-07-18 10:33:08')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 8 AND (created_at > '2018-07-18 10:33:08')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 9 AND (created_at > '2018-07-18 10:33:08')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 10 AND (created_at > '2018-07-18 10:33:08')[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 11 AND (created_at > '2018-07-18 10:33:08')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 12 AND (created_at > '2018-07-18 10:33:08')[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 13 AND (created_at > '2018-07-18 10:33:08')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 14 AND (created_at > '2018-07-18 10:33:08')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 15 AND (created_at > '2018-07-18 10:33:09')
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 16 AND (created_at > '2018-07-18 10:33:09')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 17 AND (created_at > '2018-07-18 10:33:09')
+  [1m[36m (0.8ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 18 AND (created_at > '2018-07-18 10:33:09')[0m
+  [1m[35m (0.7ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 19 AND (created_at > '2018-07-18 10:33:09')
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 20 AND (created_at > '2018-07-18 10:33:09')[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM(`trades`.`volume`) AS sum_id FROM `trades` WHERE `trades`.`currency` = 21 AND (created_at > '2018-07-18 10:33:09')
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`member_id` = 1[0m
+  [1m[35mIdDocument Load (0.4ms)[0m  SELECT `id_documents`.* FROM `id_documents` WHERE `id_documents`.`member_id` = 1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`activated` = 1[0m
+  [1m[35mTwoFactor Load (0.4ms)[0m  SELECT `two_factors`.* FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`type` = 'TwoFactor::App' LIMIT 1
+  [1m[36mTwoFactor Load (0.3ms)[0m  [1mSELECT `two_factors`.* FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`type` = 'TwoFactor::Sms' LIMIT 1[0m
+  [1m[35mDeposit Load (0.4ms)[0m  SELECT `deposits`.* FROM `deposits` WHERE `deposits`.`member_id` = 1
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`member_id` = 1 AND (currency in (1,2,3,4,5,6,7,8,9))[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 1 LIMIT 1
+  [1m[36mFundSource Load (0.3ms)[0m  [1mSELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 1 LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.2ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 2 LIMIT 1
+  [1m[36mPaymentAddress Load (0.5ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 2 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mFundSource Load (0.4ms)[0m  SELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 4 LIMIT 1
+  [1m[36mPaymentAddress Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 3 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 3 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mPaymentAddress Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 10 LIMIT 1[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 10 ORDER BY `payment_addresses`.`id` DESC LIMIT 1
+  [1m[36mFundSource Load (0.4ms)[0m  [1mSELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 2 LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 15 LIMIT 1
+  [1m[36mFundSource Load (0.3ms)[0m  [1mSELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`id` = 3 LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 16 LIMIT 1
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 16 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 19 LIMIT 1
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 19 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 20 LIMIT 1
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 20 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mPaymentAddress Exists (0.3ms)[0m  SELECT 1 AS one FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 21 LIMIT 1
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 21 ORDER BY `payment_addresses`.`id` DESC LIMIT 1[0m
+  [1m[35mWithdraw Load (0.3ms)[0m  SELECT `withdraws`.* FROM `withdraws` WHERE `withdraws`.`member_id` = 1
+  [1m[36mFundSource Load (0.4ms)[0m  [1mSELECT `fund_sources`.* FROM `fund_sources` WHERE `fund_sources`.`deleted_at` IS NULL AND `fund_sources`.`member_id` = 1[0m
+  Rendered private/funds/index.html.erb within layouts/funds (0.6ms)
+  Rendered shared/_html5.html.slim (1.0ms)
+  Rendered shared/_meta.html.slim (0.6ms)
+  [1m[35mTicket Load (0.5ms)[0m  SELECT `tickets`.* FROM `tickets` WHERE `tickets`.`author_id` = 1 AND `tickets`.`aasm_state` = 'open'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`author_id` = 1 AND `tickets`.`aasm_state` = 'open'[0m  [["author_id", 1]]
+  Rendered shared/_header_profile_setting.html.slim (5.2ms)
+  Rendered shared/_header_lang_sel.html.slim (0.2ms)
+  Rendered shared/_header.html.slim (8.8ms)
+  Rendered shared/_footer.html.slim (0.0ms)
+Completed 200 OK in 275ms (Views: 58.7ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/funds/gen_address" for 127.0.0.1 at 2018-07-19 10:33:09 -0700
+Processing by Private::FundsController#gen_address as */*
+  [1m[35mMember Load (0.6ms)[0m  SELECT `members`.* FROM `members` WHERE `members`.`disabled` = 0 AND `members`.`id` = 1 ORDER BY `members`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`member_id` = 1[0m
+  [1m[35mIdDocument Load (0.3ms)[0m  SELECT `id_documents`.* FROM `id_documents` WHERE `id_documents`.`member_id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `two_factors` WHERE `two_factors`.`member_id` = 1 AND `two_factors`.`activated` = 1[0m
+  [1m[35mPaymentAddress Load (0.4ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 2
+  [1m[36mPaymentAddress Load (0.3ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 3[0m
+  [1m[35mPaymentAddress Load (0.3ms)[0m  SELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 16
+  [1m[36mPaymentAddress Load (0.4ms)[0m  [1mSELECT `payment_addresses`.* FROM `payment_addresses` WHERE `payment_addresses`.`account_id` = 19[0m
+  [1m[35mAccount Load (0.9ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 19 LIMIT 1
+Completed 500 Internal Server Error in 115ms
+
+Bunny::TCPConnectionFailed - Could not establish TCP connection to 127.0.0.1:5672: :
+  bunny (1.2.1) lib/bunny/transport.rb:247:in `rescue in initialize_socket'
+  bunny (1.2.1) lib/bunny/transport.rb:241:in `initialize_socket'
+  bunny (1.2.1) lib/bunny/transport.rb:254:in `maybe_initialize_socket'
+  bunny (1.2.1) lib/bunny/session.rb:245:in `start'
+  app/models/amqp_queue.rb:6:in `block in connection'
+  app/models/amqp_queue.rb:5:in `connection'
+  app/models/amqp_queue.rb:11:in `channel'
+  app/models/amqp_queue.rb:15:in `exchanges'
+  app/models/amqp_queue.rb:19:in `exchange'
+  app/models/amqp_queue.rb:24:in `publish'
+  app/models/amqp_queue.rb:32:in `enqueue'
+  app/models/payment_address.rb:16:in `gen_address'
+  app/controllers/private/funds_controller.rb:31:in `block in gen_address'
+  activerecord (4.0.12) lib/active_record/relation/delegation.rb:13:in `each'
+  app/controllers/private/funds_controller.rb:23:in `gen_address'
+  actionpack (4.0.12) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.12) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.12) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:503:in `_run__1064741596485796306__process_action__callbacks'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.12) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.12) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.12) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.12) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.12) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.12) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.12) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.12) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.12) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.12) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.12) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.12) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.0.12) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.0.12) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.12) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.12) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth-identity (1.1.1) lib/omniauth/strategies/identity.rb:43:in `other_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:185:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.8) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  http_accept_language (2.0.1) lib/http_accept_language/middleware.rb:13:in `call'
+  simple_captcha2 (0.2.2) lib/simple_captcha/middleware.rb:20:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.12) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.12) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:373:in `_run__2369644969066686114__call__callbacks'
+  activesupport (4.0.12) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.12) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.12) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.12) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.12) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.12) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.12) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  request_store (1.1.0) lib/request_store/middleware.rb:8:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  lib/middleware/security.rb:11:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.12) lib/action_dispatch/middleware/static.rb:84:in `call'
+  lib/middleware/i18n_js.rb:9:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.12) lib/rails/engine.rb:511:in `call'
+  railties (4.0.12) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
