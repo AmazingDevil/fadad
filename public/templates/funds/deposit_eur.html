@@ -1,4 +1,5 @@
-<h2 class="panel-title">{{"funds.deposit_eur.title" | t}}</h2>
+<!-- <h2 class="panel-title">{{"funds.deposit_eur.title" | t}}</h2> -->
+<h2 class="panel-title">EUR Deposit</h2>
 <div class="help-block">
   {{ "funds.deposit_eur.desc" | t }}
   <ul>
@@ -16,11 +17,11 @@
       <td rowspan="3" class="v-col">{{ "funds.deposit_eur.from" | t }}</td>
       <td><label class="optional control-label">{{ "funds.deposit_eur.deposit_name" | t }}</label><p class="form-control-static">{{name}}</p></td>
       <td rowspan="3" class="v-col">{{ "funds.deposit_eur.to" | t }}</td>
-      <td><label class="optional control-label">{{ "funds.deposit_eur.to_name" | t }}</label><p class="form-control-static">Manager</p></td>
+      <td><label class="optional control-label">{{ "funds.deposit_eur.to_name" | t }}</label><p class="form-control-static">Bhavesh Patel</p></td>
     </tr>
     <tr>
       <td>
-        <label class="select required control-label" for="deposit_fund_source">{{"funds.deposit_eur.deposit_account" | t}} (<a href="javascript:;" ng-click="openFundSourceManagerPanel()">{{ "funds.deposit_eur.manage" | t }}</a>)</label>
+        <label class="select required control-label" for="deposit_fund_source">{{"funds.deposit_eur.deposit_account" | t}} (<a href="javascripts:;" ng-click="openFundSourceManagerPanel()">{{ "funds.deposit_eur.manage" | t }}</a>)</label>
         <select id="fund_source" class="select required form-control" name="fund_source"
           ng-model="depositsCtrl.deposit.fund_source"
           ng-options="fs.id as fs.label for fs in fund_sources | filter:{currency:currency}"
@@ -32,8 +33,8 @@
     <tr class="last-row">
       <td><label class="optional control-label">{{ "funds.deposit_eur.amount" | t}}</label><input class="form-control" id="deposit_sum" name="deposit[sum]" placeholder="{{'funds.deposit_eur.min_amount' | t}}" type="number" min="100" ng-model="depositsCtrl.deposit.amount" required></td>
       <td class="row">
-        <span class="col-md-12"><label class="optional control-label">{{ "funds.deposit_eur.to_bank_name" | t }}</label><p class="form-control-static">ABC Bank</p></span>
-        <span class="col-md-12"><label class="optional control-label">{{ "funds.deposit_eur.opening_bank_name" | t }}</label><p class="form-control-static"></p></span>
+        <span class="col-md-12"><label class="optional control-label">{{ "funds.deposit_eur.to_bank_name" | t }}</label><p class="form-control-static">Goldman Sachs Group</p></span>
+        <span class="col-md-12"><label class="optional control-label">{{ "funds.deposit_eur.opening_bank_name" | t }}</label><p class="form-control-static">Wells Fargo</p></span>
       </td>
     </tr>
   </table>
